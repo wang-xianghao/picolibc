@@ -5,6 +5,9 @@
 
 #pragma once
 
+/* Use default source */
+#define _BSD_SOURCE
+
 /* Use atomics for fgetc/ungetc for re-entrancy */
 #define ATOMIC_UNGETC
 
