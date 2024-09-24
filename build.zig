@@ -407,19 +407,19 @@ pub fn build(b: *std.Build) void {
             "-DFORMAT_DEFAULT_MINIMAL",
         }
     });
-    libc.addIncludePath(.{ .path = "newlib/libc/include" });
-    libc.addIncludePath(.{ .path = "newlib/libc/stdlib" });
-    libc.addIncludePath(.{ .path = "newlib/libc/signal" });
-    libc.addIncludePath(.{ .path = "newlib/libc/sys" });
-    libc.addIncludePath(.{ .path = "newlib/libc/locale" });
+    libc.addIncludePath(b.path("newlib/libc/include"));
+    libc.addIncludePath(b.path("newlib/libc/stdlib"));
+    libc.addIncludePath(b.path("newlib/libc/signal"));
+    libc.addIncludePath(b.path("newlib/libc/sys"));
+    libc.addIncludePath(b.path("newlib/libc/locale"));
     const tinystdio = true;
     if (tinystdio) {
-        libc.addIncludePath(.{ .path = "newlib/libc/tinystdio" });
+        libc.addIncludePath(b.path("newlib/libc/tinystdio"));
     } else {
-        libc.addIncludePath(.{ .path = "newlib/libc/stdio" });
+        libc.addIncludePath(b.path("newlib/libc/stdio"));
     }
     // @ivanv: hack until we auto-generate picolibc.h from picolibc.h.in
-    libc.addIncludePath(.{ .path = "" });
+    libc.addIncludePath(b.path(""));
 
     b.installArtifact(libc);
 }
