@@ -135,7 +135,7 @@
 #define __GLIBC_USE(x) 1
 #endif
 #endif
-# include_next <limits.h>
+//# include_next <limits.h>
 #endif /* __GNUC__ && !_GCC_LIMITS_H_ */
 
 #ifndef _POSIX2_RE_DUP_MAX
