@@ -1,9 +1,16 @@
 const std = @import("std");
 
 pub fn build(b: *std.Build) void {
+    const target = b.resolveTargetQuery(.{
+        .cpu_arch = .aarch64,
+        .cpu_model = .{ .explicit = &std.Target.arm.cpu.cortex_a53 },
+        .os_tag = .freestanding,
+        .abi = .none,
+    });
+
     const libc = b.addStaticLibrary(.{
         .name = "c",
-        .target = b.standardTargetOptions(.{}),
+        .target = target,
         .optimize = b.standardOptimizeOption(.{}),
     });
 
@@ -405,7 +412,7 @@ pub fn build(b: *std.Build) void {
         // @ivanv: the format is dependent on picolibc.h
         .flags = &.{
             "-DFORMAT_DEFAULT_MINIMAL",
-        }
+        },
     });
     libc.addIncludePath(b.path("newlib/libc/include"));
     libc.addIncludePath(b.path("newlib/libc/stdlib"));

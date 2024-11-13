@@ -37,6 +37,8 @@ SUCH DAMAGE.
 extern "C" {
 #endif
 
+#include <sys/time.h>
+
 struct utimbuf 
 {
   time_t actime;
