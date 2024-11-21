@@ -15,7 +15,8 @@
 #undef MISSING_SYSCALL_NAMES
 
 /* use global errno variable */
-#undef NEWLIB_GLOBAL_ERRNO
+// #undef NEWLIB_GLOBAL_ERRNO
+#define NEWLIB_GLOBAL_ERRNO
 
 /* use thread local storage */
 #undef NEWLIB_TLS

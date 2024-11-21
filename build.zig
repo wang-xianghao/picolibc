@@ -416,6 +416,7 @@ pub fn build(b: *std.Build) void {
         // @ivanv: the format is dependent on picolibc.h
         .flags = &.{
             "-DFORMAT_DEFAULT_MINIMAL",
+            "-fno-sanitize=undefined",
         },
     });
     libc.addIncludePath(b.path("newlib/libc/include"));

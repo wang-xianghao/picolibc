@@ -1,0 +1,9 @@
+0
+924 8776080 1731467841778874165 2cab818f2fdeda1fd0ad5ab0cde384d0 0 /Users/xianghao/trusys/picolibc/newlib/libc/string/u_strerr.c
+4502 8775045 1731467841645833253 09d44972d3c438c4c9037fb28c913fce 0 /Users/xianghao/trusys/picolibc/newlib/libc/include/_ansi.h
+1637 8745653 1731465766857135017 f1b8025b87b3fc0effab3c438379ec7a 0 /Users/xianghao/trusys/picolibc/newlib/libc/include/newlib.h
+10006 8774817 1731467827153284040 6a8bbdf27f4b3933ced2404d88019653 0 /Users/xianghao/trusys/picolibc/picolibc.h
+9432 8775104 1731467841654140680 6d06ef8590d9acbc5317cef5b336c972 0 /Users/xianghao/trusys/picolibc/newlib/libc/include/sys/config.h
+13877 8775073 1731467841649656728 afd42063865f080df71333deb82e54f4 0 /Users/xianghao/trusys/picolibc/newlib/libc/include/machine/ieeefp.h
+17325 8775106 1731467841654464146 c73dddaf602a51fbd2393c8d75c6053f 0 /Users/xianghao/trusys/picolibc/newlib/libc/include/sys/features.h
+5767 2052833 1717700912000000000 43e60560d113a577638ed78a0a3d6eaf 1 include/float.h
