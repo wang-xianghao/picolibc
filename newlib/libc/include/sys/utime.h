@@ -33,6 +33,8 @@ SUCH DAMAGE.
    particular system.  If there is a utime.h in libc/sys/SYSDIR/sys,
    it will override this one.  */
 
+#include <time.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif

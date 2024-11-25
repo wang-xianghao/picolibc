@@ -151,3 +151,8 @@
 #ifndef PATH_MAX
 #define PATH_MAX	4096
 #endif
+
+// INFO: add SSIZE_MAX
+#ifndef SSIZE_MAX
+#define SSIZE_MAX LONG_MAX
+#endif
