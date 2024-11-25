@@ -408,17 +408,20 @@ pub fn build(b: *std.Build) void {
             "newlib/libc/picolib/picosbrk.c",
             "newlib/libc/picolib/dso_handle.c",
             "newlib/libc/picolib/getauxval.c",
+            "ext/src/inet_aton.c",
+            "ext/src/htonl.c",
+            "ext/src/ntohl.c",
         },
         // @ivanv: the format is dependent on picolibc.h
-        .flags = &.{
-            "-DFORMAT_DEFAULT_MINIMAL",
-        },
+        .flags = &.{ "-DFORMAT_DEFAULT_MINIMAL", "-fno-sanitize=undefined" },
     });
     libc.addIncludePath(b.path("newlib/libc/include"));
+    libc.addIncludePath(b.path("newlib/libc/include/sys"));
     libc.addIncludePath(b.path("newlib/libc/stdlib"));
     libc.addIncludePath(b.path("newlib/libc/signal"));
     libc.addIncludePath(b.path("newlib/libc/sys"));
     libc.addIncludePath(b.path("newlib/libc/locale"));
+    libc.addIncludePath(b.path("ext/include"));
     const tinystdio = true;
     if (tinystdio) {
         libc.addIncludePath(b.path("newlib/libc/tinystdio"));
