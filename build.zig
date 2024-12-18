@@ -402,6 +402,8 @@ pub fn build(b: *std.Build) void {
             "newlib/libc/locale/lmessages.c",
             "newlib/libc/locale/lmonetary.c",
             "newlib/libc/locale/nl_langinfo.c",
+            "newlib/libc/tinystdio/fopen.c",
+            "newlib/libc//tinystdio/fdopen.c",
             // We want to use our defined __heap_start and __heap_end and so
             // we need to compile these source files as it contains sbrk that
             // uses those symbols.
